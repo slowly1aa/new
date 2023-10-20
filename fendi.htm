@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>FENDI體生成器</title>
+	<script src="%E4%BA%94%E6%A2%9D%E9%AB%94%E7%94%9F%E6%88%90%E5%99%A8_files/prompt.js"></script></head>
+
+	<body>
+		<h1>FENDI體生成器</h1>
+		<div>
+			<input id="me" value="FENDI" style="width:60px;">：<input id="character" value="Rita" style="width:60px;"> 你們真的愛搞事
+		</div>
+		<div>
+			就算沒有 <input id="object" value="OWL" style="width:60px;"> 幫插究光也沒差
+		</div>
+		<button type="button" id="mainButton">跪下來舔就對了!touch me</button>
+		<div>
+			<textarea id="output" style="width:400px;height:200px;"></textarea>
+		</div>
+	
+
+	<script>
+		var button = document.getElementById("mainButton")
+		var meInput = document.getElementById("me")
+		var characterInput = document.getElementById("character")
+		var objectInput = document.getElementById("object")
+		var thing1Input = document.getElementById("thing1")
+		var thing2Input = document.getElementById("thing2")
+		var output = document.getElementById("output")
+		button.onclick = function()
+		{
+			var result = [];
+			result.push(
+			  meInput.value + "：" + characterInput.value + "!! 你們真的愛搞事",
+			  "18!!ゴミ!!(╯°Д°)╯",
+			  "就算沒有" + objectInput.value + "幫插究光也沒差",
+			  "憑藉我的肝之力，也能將" + characterInput.value + "的同黨全部趕跑",
+			  "GC2うまい!!MR <180 NO PT!!神話 スキル GET さいこう",
+			  objectInput.value + ":" +  characterInput.value + "你道歉就對了，(*｀皿´*)ﾉ" ,
+			  "   你不道歉我怎麼繼續跟" + meInput.value + "溝通" ,
+			  "   不歡迎不願意溝通 搞小團體的人" ,
+			);
+			const data = result.join("\n")
+			output.value = data;
+			// 複製文字到剪貼簿
+			navigator.clipboard.writeText(data).then(() => alert('已複製到剪貼簿'));
+		};
+	</script>
+
+
+</body></html>
